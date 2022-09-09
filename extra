@@ -1,0 +1,16 @@
+<ul class="navbar-nav col-xl-1">
+  <li class="nav-item">
+    <a href="#" class="nav-link">
+      <span><i class="fa-regular fa-heart"></i></span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a href="#" class="nav-link">
+      <span><i class="fa-regular fa-cart-shopping-fast"></i></span
+    ></a>
+  </li>
+</ul>
+
+<i class="fa-solid fa-right-to-bracket"></i>
+
+<i class="fa-solid fa-user"></i>
