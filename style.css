@@ -7,6 +7,7 @@
      
      -heading
      #fec4ae
+     #ede1e3
 
      -background
      #ececec
@@ -130,12 +131,91 @@ nav {
   color: #ececec;
   font-size: 15px;
 }
-/* .carousel-inner {
-  height: 450px;
-} */
 
-.carousel-item {
+/* Featured discounts CSS*/
+.featured-discounts {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 35px 0;
+}
+.discount-type {
+  float: left;
+  margin: 0 10px;
+}
+.discount-type img {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+/* Cards Section */
+
+.cards-section {
+  margin: 50px 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heading {
+  min-width: 40%;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #fec4ae;
+  border-radius: 20vh;
+}
+.sub-heading {
+  letter-spacing: 5px;
+  font-size: 20px;
+  min-width: 30%;
+  margin: 10px 0;
+  /* border: 1px solid red; */
+}
+.cards {
+  width: 100%;
+  display: inline-block;
+}
+
+.card-item {
+  float: left;
+  width: 23%;
+  height: 330px;
+  /* border-right: 1px solid #fff; */
+  /* border-left: 1px solid #fff; */
+  padding: 10px;
+  margin: 5% 0 6% 1.5%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.card-item:hover {
+  transform: scale(1.05);
+}
+
+.card-item img {
   height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+.card-details {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+.card-details p {
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 576px) {
