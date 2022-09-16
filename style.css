@@ -134,19 +134,17 @@ nav {
 
 /* Featured discounts CSS*/
 .featured-discounts {
-  height: 100px;
+  height: 150px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 35px 0;
+  padding: 35px 0;
+  border: 1px solid red;
 }
 .discount-type {
-  float: left;
-  margin: 0 10px;
-}
-.discount-type img {
-  height: 100px;
   width: 100px;
+}
+.discount-type-img {
+  height: 100%;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -298,7 +296,6 @@ footer {
   width: 100%;
 }
 .foot-content {
-  height: 400px;
   float: left;
   font-size: 12px;
   /* border: 1px red solid; */
@@ -316,7 +313,7 @@ footer {
   height: 60px;
   width: 100%;
   background: #f9f9f9;
-  display: inline-block;
+  float: left;
 }
 .download-links,
 .social-links,
@@ -366,5 +363,257 @@ footer {
     margin: 5px 10px 0 0;
     border: none;
     border-radius: 8px;
+  }
+  .featured-discounts {
+    padding: 20px 0;
+    height: 100px;
+  }
+  .details-type {
+    height: 20px;
+    width: 20px;
+  }
+  .card-col-4 {
+    width: 30%;
+    height: 50px;
+  }
+  .card-item-col-4 {
+    height: 150px;
+  }
+  .card-item-col-4 h2 {
+    font-size: 14px;
+  }
+  .card-item-col-4 p {
+    font-size: 8px;
+  }
+  .card-details {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    height: 30%;
+
+    border-radius: 5px;
+  }
+  .card-item-col-2 {
+    height: 150px;
+  }
+  .card-item-col-2 h2 {
+    font-size: 14px;
+  }
+  .card-item-col-2 p {
+    font-size: 10px;
+  }
+  .card-item-col-1 {
+    height: 150px;
+  }
+  .slide-details span {
+    font-size: 20px;
+  }
+  .slide-details p {
+    font-size: 9px;
+  }
+  .heading {
+    min-width: 25%;
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+  .sub-heading {
+    font-size: 12px;
+    min-width: 25%;
+  }
+}
+@media screen and (min-width: 576px) {
+  .card-item-col-4 {
+    height: 200px;
+  }
+  .card-item-col-4 h2 {
+    font-size: 20px;
+  }
+  .card-item-col-4 p {
+    font-size: 8px;
+  }
+  .card-details {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    height: 30%;
+    border-radius: 5px;
+  }
+  .card-item-col-2 {
+    height: 200px;
+  }
+  .card-item-col-2 h2 {
+    font-size: 20px;
+  }
+  .card-item-col-2 p {
+    font-size: 12px;
+  }
+  .card-item-col-1 {
+    height: 200px;
+  }
+  .slide-details span {
+    font-size: 30px;
+  }
+  .slide-details p {
+    font-size: 12px;
+  }
+  .heading {
+    min-width: 25%;
+    padding: 10px 35px;
+    font-size: 20px;
+  }
+  .sub-heading {
+    font-size: 16px;
+    min-width: 25%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .featured-discounts {
+    padding: 20px 0;
+  }
+  .details-type {
+    height: 40px;
+    width: 40px;
+  }
+
+  .card-item-col-4 {
+    height: 250px;
+  }
+  .card-item-col-4 h2 {
+    font-size: 20px;
+  }
+  .card-item-col-4 p {
+    font-size: 8px;
+  }
+  .card-details {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    height: 30%;
+    border-radius: 5px;
+  }
+  .card-item-col-2 {
+    height: 250px;
+  }
+  .card-item-col-2 h2 {
+    font-size: 24px;
+  }
+  .card-item-col-2 p {
+    font-size: 12px;
+  }
+  .card-item-col-1 {
+    height: 250px;
+  }
+  .slide-details span {
+    font-size: 30px;
+  }
+  .slide-details p {
+    font-size: 14px;
+  }
+  .heading {
+    min-width: 25%;
+    padding: 10px 35px;
+    font-size: 24px;
+  }
+  .sub-heading {
+    font-size: 18px;
+    min-width: 25%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .featured-discounts {
+    padding: 20px 0;
+  }
+  .details-type {
+    height: 50px;
+    width: 50px;
+  }
+  .card-item-col-4 {
+    height: 350px;
+  }
+  .card-item-col-4 h2 {
+    font-size: 20px;
+  }
+  .card-item-col-4 p {
+    font-size: 8px;
+  }
+  .card-details {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    height: 30%;
+    border-radius: 5px;
+  }
+
+  .card-item-col-2 {
+    height: 320px;
+  }
+  .card-item-col-2 h2 {
+    font-size: 24px;
+  }
+  .card-item-col-2 p {
+    font-size: 16px;
+  }
+  .card-item-col-1 {
+    height: 340px;
+  }
+  .slide-details span {
+    font-size: 65px;
+  }
+  .slide-details p {
+    font-size: 24px;
+  }
+  .heading {
+    min-width: 25%;
+    padding: 10px 35px;
+    font-size: 30px;
+  }
+  .sub-heading {
+    font-size: 24px;
+    min-width: 25%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .featured-discounts {
+    padding: 20px 0;
+  }
+  .details-type {
+    width: 70px;
+  }
+
+  .card-item-col-4 {
+    height: 400px;
+  }
+  .card-item-col-4 h2 {
+    font-size: 36px;
+  }
+  .card-item-col-4 p {
+    font-size: 24px;
+  }
+  .card-item-col-2 {
+    height: 400px;
+  }
+  .card-item-col-2 h2 {
+    font-size: 36px;
+  }
+  .card-item-col-2 p {
+    font-size: 24px;
+  }
+  .card-item-col-1 {
+    height: 400px;
+  }
+  .slide-details span {
+    font-size: 65px;
+  }
+  .slide-details p {
+    font-size: 24px;
+  }
+  .heading {
+    min-width: 25%;
+    padding: 10px 50px;
+    font-size: 40px;
+  }
+  .sub-heading {
+    font-size: 24px;
+    min-width: 25%;
   }
 }
