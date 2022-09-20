@@ -14,3 +14,22 @@
 <i class="fa-solid fa-right-to-bracket"></i>
 
 <i class="fa-solid fa-user"></i>
+
+<ul>
+  <li class="filter-item">
+    <input type="checkbox" id="women" value="women" />
+    <label for="women">Women</label>
+  </li>
+  <li class="filter-item">
+    <input type="checkbox" id="men" value="men" />
+    <label for="men">Men</label>
+  </li>
+  <li class="filter-item">
+    <input type="checkbox" id="kids" value="kids" />
+    <label for="Kids">Kids</label>
+  </li>
+  <li class="filter-item">
+    <input type="checkbox" id="sports" value="sports" />
+    <label for="sports">Sports & Fitness</label>
+  </li>
+</ul>
