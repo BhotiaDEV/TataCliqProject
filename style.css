@@ -104,7 +104,7 @@ body {
   position: relative;
   margin: 20px 0;
   padding: 10px 20px;
-  color: #ffffff;
+  color: #000000;
 }
 #coupon-details p:before {
   content: "";
@@ -112,7 +112,7 @@ body {
   background-image: linear-gradient(to right, #ff01fb, #02a9ea, #faff00);
   top: 2px;
   left: 20px;
-  width: 100%;
+  width: 95%;
   height: 100%;
   filter: blur(25px);
   padding: 20px 0;
@@ -137,31 +137,42 @@ body {
   }
 }
 @media screen and (max-width: 400px) {
+  #coupon-details {
+    padding: 0;
+  }
   #coupon-details h1 {
     font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  #coupon-details h1:before {
+    padding: 0;
   }
   #coupon-details p {
     font-size: 12px;
+    margin: 0;
+    padding: 0;
   }
 }
 @media screen and (max-width: 1080px) {
   #coupon-img {
     width: 100%;
-    height: 30vh;
-    grid-template-rows: 15vh 15vh;
+    height: 40vh;
+    grid-template-rows: 20vh 20vh;
     margin: 10px 0;
   }
   #coupon-details {
     width: 100%;
     height: 40vh;
+    padding: 0 5px;
   }
   #coupon-details h1 {
-    font-size: 26px;
     margin: 5px 0;
     padding: 5px 5px;
   }
   #coupon-details h1:before {
     padding: 5px 0;
+    width: 80%;
   }
   #coupon-details p {
     margin: 5px 0;
