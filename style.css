@@ -43,6 +43,7 @@ body {
   width: 80vw;
   z-index: 100;
   visibility: hidden;
+  overflow: hidden;
   background: #ebf0f2;
   box-shadow: 10px 0 0 100vh rgba(100, 100, 100, 0.8);
 }
