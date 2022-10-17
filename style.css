@@ -236,6 +236,12 @@ nav {
 .topbar-item:hover {
   color: #ececec;
 }
+#togglebtn {
+  color: #ffffff;
+}
+.fa-sun {
+  color: orangered;
+}
 /* bottombar css */
 .bottombar {
   width: 100%;
@@ -287,7 +293,12 @@ nav {
 }
 .fa-heart,
 .fa-cart-shopping {
-  color: var(--primary-bg-color);
+  color: #888;
+  font-size: 15px;
+}
+.fa-heart:hover,
+.fa-cart-shopping:hover {
+  color: #ececec;
   font-size: 15px;
 }
 
