@@ -1,7 +1,7 @@
 /*  colors used 
      -header
 
-     #212121
+     var(--secondary-color)
      #ffffff
      #000000
      
@@ -10,7 +10,7 @@
      #ede1e3
 
      -background
-     #ececec
+     var(--primary-bg-color)
 
      -footer
      #f9f9f9
@@ -19,6 +19,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+:root {
+  --primary-bg-color: #ececec;
+  --secondary-color: #212121;
+  --hover-shadow: #fec4ae;
+  --primary-footer-color: #fff;
+}
+.dark-theme {
+  --primary-bg-color: #212121;
+  --secondary-color: #ececec;
+  --hover-shadow: #000000;
+  --primary-footer-color: #303030;
 }
 li {
   list-style: none;
@@ -29,11 +41,9 @@ a {
 
 body {
   letter-spacing: 0.5px;
-  background-color: #ececec;
+  background-color: var(--primary-bg-color);
 }
-.red {
-  color: red;
-}
+
 #coupon {
   position: fixed;
   display: inline-block;
@@ -44,7 +54,7 @@ body {
   z-index: 100;
   visibility: hidden;
   /* overflow: hidden; */
-  background: #ebf0f2;
+  background: var(--primary-bg-color);
   box-shadow: 10px 0 0 100vh rgba(100, 100, 100, 0.8);
 }
 .closebutton {
@@ -219,8 +229,12 @@ nav {
 .topbar-item {
   margin-top: 10px;
   padding-right: 15px;
-  color: #ececec;
+  color: #888;
   float: right;
+  cursor: pointer;
+}
+.topbar-item:hover {
+  color: #ececec;
 }
 /* bottombar css */
 .bottombar {
@@ -230,8 +244,8 @@ nav {
 }
 .categories-button,
 .brands-button {
-  color: #ececec;
-  background-color: #212121;
+  color: #212121;
+  background-color: #ececec;
   float: left;
   padding: 5px 25px;
   margin: 5px 10px 0 0;
@@ -240,8 +254,8 @@ nav {
 }
 .categories-button:hover,
 .brands-button:hover {
-  background-color: #ececec;
-  color: #000;
+  background-color: #212121;
+  color: #888;
 }
 .search {
   position: relative;
@@ -273,7 +287,7 @@ nav {
 }
 .fa-heart,
 .fa-cart-shopping {
-  color: #ececec;
+  color: var(--primary-bg-color);
   font-size: 15px;
 }
 
@@ -312,6 +326,7 @@ nav {
   font-size: 24px;
   font-weight: 500;
   background-color: #fec4ae;
+  color: #212121;
   border-radius: 20vh;
 }
 .sub-heading {
@@ -320,6 +335,7 @@ nav {
   min-width: 30%;
   margin-top: 10px;
   margin-bottom: 10%;
+  color: var(--secondary-color);
   /* border: 1px solid red; */
 }
 .cards {
@@ -335,14 +351,16 @@ nav {
   height: 330px;
   /* border-right: 1px solid #fff; */
   /* border-left: 1px solid #fff; */
-  padding: 10px;
-  margin: 0 0.5% 10% 1%;
+  /* padding: 10px; */
+  margin: 0 0.5% 10% 1.5%;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 10px;
 }
 .card-item-col-4:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 20px var(--hover-shadow);
 }
 
 .card-item-col-4 img {
@@ -369,14 +387,16 @@ nav {
   float: left;
   width: 45%;
   height: 370px;
-  padding: 10px;
+  /* padding: 10px; */
   margin: 0% 2.5% 5% 2.5%;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 10px;
 }
 .card-item-col-2:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 25px var(--hover-shadow);
 }
 
 .card-item-col-2 img {
@@ -402,7 +422,7 @@ nav {
   width: 50%;
   height: 100%;
   padding-left: 20px;
-  color: #212121;
+  color: var(--secondary-color);
   background-color: #cc021c;
   display: flex;
   justify-content: center;
@@ -427,13 +447,15 @@ nav {
   height: 100%;
   width: 50%;
   border-radius: 0 10px 10px 0;
+
   /* width: 100%; */
 }
 
 /* footer css */
-footer {
+#footer {
   width: 100%;
-  background-color: #ffffff;
+  color: var(--secondary-color);
+  background-color: var(--primary-footer-color);
 }
 .foot-div {
   display: inline-block;
@@ -456,7 +478,7 @@ footer {
 .links {
   height: 60px;
   width: 100%;
-  background: #f9f9f9;
+  background: var(--primary-bg-color);
   float: left;
 }
 .download-links,
@@ -466,13 +488,21 @@ footer {
   width: 33%;
   text-align: center;
 }
-
-.social-links a {
-  color: #000000;
+.fa-brands {
+  color: var(--secondary-color);
 }
+.foot-content h5:hover,
+.foot-content p:hover,
+.download-links:hover,
+.social-links:hover,
+.copyright:hover,
 .fa-brands:hover {
   color: #fec4ae;
 }
+.social-links a {
+  color: #000000;
+}
+
 /* Css for responsiveness */
 
 @media screen and (max-width: 576px) {
@@ -500,8 +530,8 @@ footer {
   }
   .categories,
   .brands {
-    color: #ececec;
-    background-color: #212121;
+    color: var(--primary-bg-color);
+    background-color: var(--secondary-color);
     float: left;
     padding: 4px 8px;
     margin: 5px 10px 0 0;
