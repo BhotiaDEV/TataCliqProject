@@ -237,7 +237,7 @@ nav {
   color: #ececec;
 }
 #togglebtn {
-  color: #ffffff;
+  color: #2b79ff;
 }
 .fa-sun {
   color: orangered;
@@ -300,6 +300,25 @@ nav {
 .fa-cart-shopping:hover {
   color: #ececec;
   font-size: 15px;
+}
+/* geolocation */
+#geolocation {
+  /* display: inline-block; */
+  height: 8vh;
+  width: 100%;
+}
+#place,
+#weather,
+#weather-logo {
+  color: var(--secondary-color);
+  width: 30%;
+  height: 100%;
+  /* border: 1px solid red; */
+  float: left;
+  margin: 0 1.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Featured discounts CSS*/
@@ -531,6 +550,7 @@ nav {
   }
   .search > input {
     height: 30px;
+
     padding-left: 20px;
   }
   .search-icon {
@@ -545,9 +565,11 @@ nav {
     color: var(--primary-bg-color);
     background-color: var(--secondary-color);
     float: left;
-    padding: 4px 8px;
-    margin: 5px 10px 0 0;
+    padding: 0 3px;
+    /* margin: 5px 5px 0 0; */
     border: none;
+    width: 25%;
+    font-size: 12px;
     border-radius: 8px;
   }
   .featured-discounts {
