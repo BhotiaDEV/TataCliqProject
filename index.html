@@ -59,7 +59,6 @@
       });
     </script>
 
-    <script src="index.js" type="text/javascript"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="images/tatacliqTitleLogo.png" type="image/x-icon" />
     <title>Tata Cliq</title>
@@ -89,14 +88,14 @@
           </div>
           <div class="bottombar">
             <div class="categories">
-              <button class="categories-button">
-                Categories <span><i class="fa-solid fa-caret-down"></i></span>
-              </button>
+              <div class="categories-button">
+                Categories<span><i class="fa-solid fa-caret-down"></i></span>
+              </div>
             </div>
             <div class="brands">
-              <button class="brands-button">
-                Brand <span><i class="fa-solid fa-caret-down"></i></span>
-              </button>
+              <div class="brands-button">
+                Brand<span><i class="fa-solid fa-caret-down"></i></span>
+              </div>
             </div>
             <div class="search col-xl-6 col-md-6 col-sm-3 col-3">
               <input type="text" placeholder="Search for brands" />
@@ -119,6 +118,11 @@
           </div>
         </div>
       </nav>
+      <div id="geolocation">
+        <p id="place"><i class="fa-solid fa-location-dot"></i></p>
+        <p id="weather">Temprature is</p>
+        <p id="weather-logo"></p>
+      </div>
     </header>
     <main>
       <div class="banner">
@@ -484,8 +488,11 @@
       </div>
     </div>
     <!-- Script tags -->
+    <script src="index.js" type="text/javascript"></script>
+
     <script>
       window.onload = loadCoupon();
+      window.onload = getGeolocation();
     </script>
   </body>
 </html>
