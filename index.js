@@ -38,10 +38,10 @@ function showPosition(data) {
       let temp = data.list[0].temp.day;
       console.log(cityName);
       console.log(temp);
-
       place.innerHTML = `<i class="fa-solid fa-location-dot"></i>${cityName}`;
       weather.innerText = `Temprature is ${temp}`;
-      weatherlogo.innerHTML = `<img src='https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png' alt="weather"/>`;
+
+      weatherlogo.innerHTML = `${data.list[0].weather[0].description} <img src='https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png' alt="weather"/>`;
     })
     .catch((err) => {
       console.log(err);
