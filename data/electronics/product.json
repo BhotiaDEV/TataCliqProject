@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "product_name": "boAt Airdopes 131T True wireless Earbuds (Active Black Indi)",
+    "original_price": 2999,
+    "price": 1299,
+    "discount": "56%",
+    "image": "asdf",
+    "color": "black",
+    "brand": "Boat",
+    "rating": "3.7",
+    "review": "10",
+    "offers": [
+      {
+        "offer": "15% off on AU Small Finance Bank Limited Debit & Credit Cards.",
+        "coupon": "Use Code: AUCLIQ300 | Min Purchase: ₹1500"
+      },
+      {
+        "offer": "15% off on AU Small Finance Bank Limited Debit & Credit Cards.",
+        "coupon": "Use Code: AUCLIQ300 | Min Purchase: ₹1500"
+      }
+    ],
+    "seller": "Adidas Authorised Seller. My Car Pune Pvt.Ltd."
+  },
+  {
+    "id": 2,
+    "product_name": "ClickBuy",
+    "original_price": 13250,
+    "price": 10600,
+    "discount": "20%",
+    "image": "asdf",
+    "color": "black",
+    "brand": "Tommy Hilfiger",
+    "rating": "4.5",
+    "review": "210",
+    "offers": [
+      {
+        "offer": "15% off on AU Small Finance Bank Limited Debit & Credit Cards.",
+        "coupon": "Use Code: AUCLIQ300 | Min Purchase: ₹1500"
+      },
+      {
+        "offer": "15% off on AU Small Finance Bank Limited Debit & Credit Cards.",
+        "coupon": "Use Code: AUCLIQ300 | Min Purchase: ₹1500"
+      }
+    ],
+    "seller": "Titan Company Ltd"
+  }
+]

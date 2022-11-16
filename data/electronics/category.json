@@ -1,0 +1,24 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "earphones"
+    },
+    {
+      "id": 2,
+      "name": "speakers"
+    },
+    {
+      "id": 3,
+      "name": "headphones"
+    },
+    {
+      "id": 4,
+      "name": "trimmers"
+    },
+    {
+      "id": 5,
+      "name": "watches"
+    }
+  ]
+}
