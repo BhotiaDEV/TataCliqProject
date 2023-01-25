@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from 'react';
 import axios from 'axios';
 import './ViewBooking.css';
+import Header from '../Header';
 
 const orderurl = 'https://tatacliqapi.onrender.com/orders';
 const updateurl = 'https://tatacliqapi.onrender.com/updateOrder';
@@ -9,31 +10,34 @@ const ViewBooking = (props) => {
     const [order,setOrder] = useState([]);
 
     useEffect(()=>{
-        let query = props.location.search;
-        let status = query.split('&')[0].split('=')[1];
-        let orderId = query.split('&')[1].split('=')[1];
-        let date = query.split('&')[2].split('=')[1];
-        let bank = query.split('&')[3].split('=')[1];
+        if(props.location){
 
-        if(query){
-            let data ={
-                "status":status,
-                "date":date,
-                "bank_name":bank
+            let query = props.location.search;
+            let status = query.split('&')[0].split('=')[1];
+            let orderId = query.split('&')[1].split('=')[1];
+            let date = query.split('&')[2].split('=')[1];
+            let bank = query.split('&')[3].split('=')[1];
+            
+            if(query){
+                let data ={
+                    "status":status,
+                    "date":date,
+                    "bank_name":bank
+                }
+                let id = orderId;
+                axios.patch(`${updateurl}/${id}`,data)
+                // fetch(`${updateurl}/${id}`,{
+                //     method:'PATCH',
+                //     headers:{
+                //         'Accept':'application/json',
+                //         'Content-Type':'application/json'
+                //     },
+                //     body: JSON.stringify(data)
+                // })
             }
-            let id = orderId;
-            fetch(`${updateurl}/${id}`,{
-                method:'PATCH',
-                headers:{
-                    'Accept':'application/json',
-                    'Content-Type':'application/json'
-                },
-                body: JSON.stringify(data)
-            })
         }
-        
-        axios.get(orderurl)
-        .then((res)=>{setOrder(res.data)})
+            axios.get(orderurl)
+            .then((res)=>{setOrder(res.data)})
         
 
 
@@ -49,6 +53,14 @@ const ViewBooking = (props) => {
                     <td>{item.name}</td>
                     <td>{item.phone}</td>
                     <td>{item.email}</td>
+                    <td>
+
+                    {item.products.map((elem)=>{
+                        return(elem.product_name)
+                    })
+                    }
+                    </td>
+                    
                     <td>{item.date}</td>
                     <td>{item.Status}</td>
                     <td>{item.Bank}</td>
@@ -60,7 +72,7 @@ const ViewBooking = (props) => {
         }
     }
     return(<>
-                {/* {console.log(order)} */}
+            <Header/>
             <div className='bookings'>
                 <div className='booking-heading'>My Orders</div>
                 <table className='table'>

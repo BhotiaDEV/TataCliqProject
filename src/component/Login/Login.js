@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../Header';
 import './Login.css'
 
 const loginurl = 'https://loginapilive.onrender.com/api/auth/login'
@@ -36,6 +37,7 @@ export default class Login extends Component {
   render() {
     return (
         <React.Fragment>
+          <Header/>
           <div className='login'>
             <div className='form'>
               <div className='login-heading'>Login</div>

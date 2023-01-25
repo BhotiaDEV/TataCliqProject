@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Cart.css'
 import AddressPopup from './AddressPopup';
+import Header from '../Header';
 
 const placeOrder = 'https://tatacliqapi.onrender.com/placeOrder';
 
@@ -51,6 +52,7 @@ export default class Cart extends Component {
             this.setState({cost: totalPrice})
             this.setState({original_price: originalPrice})
             console.log(this.state.cost)
+            console.log(this.state.cart)
         })
         
     }
@@ -139,14 +141,15 @@ export default class Cart extends Component {
         // let obj = this.state;
         console.log(obj)
         console.log(JSON.stringify(obj))
-
-        // axios.post(placeOrder,obj)
-        // .then((response)=>{console.log(response)})
+        
+        axios.post(placeOrder,obj)
+        .then((response)=>{console.log(response)})
     }
 
     render () {
         return(
         <React.Fragment>
+            <Header/>
             <div className='cart-page'>
                 <div className='cart-heading'>
                     <span>My Bag</span>
@@ -162,7 +165,9 @@ export default class Cart extends Component {
                             {/* <button className='address-change' onClick={(e)=>this.setState({popup : true})}>Change </button> */}
                             {/* <AddressPopup popup={this.state.popup} onClose={()=>{this.setState({popup:false})}} /> */}
                         </div>
-                    <form  action='http://localhost:4100/paynow' method='POST' className='purchase-details'>
+                    <form 
+                     action='http://localhost:4100/paynow' method='POST'
+                      className='purchase-details'>
                         <input type='hidden' name = 'id' value={this.state.id}/>
                         <input type='hidden' name = 'cost' value={this.state.cost}/>
                         <input type='hidden' name = 'name' value={this.state.name}/>

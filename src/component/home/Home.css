@@ -262,6 +262,12 @@ body {
 /* Css for responsiveness */
 
 @media screen and (max-width: 576px) {
+  .brand-name{
+    flex:2;
+  }
+  .nav-options{
+    flex:8;
+  }
   .logo {
     margin-top: 30px;
     height: 35px;
@@ -273,9 +279,9 @@ body {
   .topbar-item {
     margin-top: 5%;
   }
-  .search > input {
+  .search  input {
     height: 30px;
-
+    widtH:150px;
     padding-left: 20px;
   }
   .search-icon {
@@ -283,7 +289,10 @@ body {
   }
   .wishlist,
   .your-cart {
-    margin-top: 5%;
+    border:1px solid red;
+    z-index:1000;
+    /* width:200px; */
+    /* margin-top: 5%; */
   }
   .categories,
   .brands {

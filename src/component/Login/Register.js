@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../Header';
 import './Register.css';
 
 const registerurl = 'https://loginapilive.onrender.com/api/auth/register'
@@ -25,6 +26,7 @@ export default class Register extends Component {
   render() {
     return (
       <React.Fragment>
+        <Header/>
         <div className='register'>
             <form>
               <div className='register-heading'>Register</div>

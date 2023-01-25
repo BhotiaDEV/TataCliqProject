@@ -22,7 +22,7 @@ const Routing = () => {
   // }
   return (
     <BrowserRouter>
-      <Header userInput={(data)=>{setInput(data)}}/>
+      {/* <Header userInput={(data)=>{setInput(data)}}/> */}
       {/* {console.log(input)} */}
       <Route exact path="/" component={Home} />
       <Route path="/listing/:category_id" render={(props)=> <ListingPage {...props} /> }/>

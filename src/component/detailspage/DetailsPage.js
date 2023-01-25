@@ -1,4 +1,5 @@
 import React, {Component } from "react";
+import Header from "../Header";
 import DetailsDisplay from "./DetailsDisplay";
 import "./DetailsPage.css";
 
@@ -218,6 +219,7 @@ class DetailsPage extends Component {
     // console.log(this.props);
     return (
       <>
+        <Header/>
         <main>
           <DetailsDisplay productdata={this.state.productdetails} />
         </main>

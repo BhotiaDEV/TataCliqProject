@@ -1,5 +1,6 @@
 import React , { Component, useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../Header';
 import BrandsFilter from './filters/BrandsFilter';
 import PriceFilter from './filters/PriceFilter';
 import ProductFilter from './filters/ProductFilter';
@@ -10,6 +11,7 @@ const listingurl = "https://tatacliqapi.onrender.com/filter"
 const ListingPage = (props)=> {
     
     const [searchedData,setSearch] = useState([]);
+    const [allData,setAll] = useState([]);
     const [productList,setList] = useState([]);
     const [extraData,setExtra] = useState([]);
     const [category,setCategory] = useState([]);
@@ -26,8 +28,7 @@ const ListingPage = (props)=> {
       .then((res) => res.json())
       .then((data) => {
         setList(data);
-        setSearch(data);
-        
+        setSearch(data)
       }
     );
     fetch(`https://tatacliqapi.onrender.com`,{
@@ -35,19 +36,11 @@ const ListingPage = (props)=> {
     })
       .then((res) => res.json())
       .then((data) => {
-        setExtra(data.sort(() => 0.5 - Math.random()).slice(0,6))
+        setExtra(data.sort(() => 0.5 - Math.random()).slice(0,6));
+        setAll(data);
       })
-    setInput(props.input)
+
   },[])
-
-  // useEffect((e)=>{
-  //   // e.preventDefault();
-  //   let output = productList.filter((item)=>{
-  //     return(item.product_name.toLowerCase().indexOf(input.toLowerCase())>-1)
-  //   })
-  //   setSearch(output)
-  // },[input])
-
 
   const renderItemList = (data) => {
     if (data) {
@@ -98,7 +91,7 @@ const ListingPage = (props)=> {
     }
     
   }
-const renderExtraData = (extraData) => {
+  const renderExtraData = (extraData) => {
     if (extraData) {
       return extraData.map((item) => {
         return (
@@ -144,21 +137,34 @@ const renderExtraData = (extraData) => {
     }
   }
   const setDataperFilter=(data)=>{
-    setList(data);
+    setSearch(data);
   }
   
 
- const filterSearch = (search) => {
-    
-      let output = productList.filter((item)=>{
-        return(item.product_name.toLowerCase().indexOf(search.toLowerCase())>-1)
+ const setDataPerSearch = (keyword) => {
+    console.log(keyword);
+      // let output = productList.filter((item)=>{
+      //   return(item.product_name.toLowerCase().indexOf(search.toLowerCase())>-1)
+      // })
+      console.log(allData);
+      let output = [];
+      output = allData.filter((data) => {
+        if(keyword === '') return productList;
+        return (
+          // data.id == 16
+          // console.log(data.product_name)
+          data.product_name.toLowerCase().includes(keyword.toLowerCase())
+          )
       })
-      setSearch(output)
-    
+
+      console.log(output);
+      setSearch(output);
+      setExtra('');
   }
   
   return (
       <>
+        <Header userInput={(data)=>{setDataPerSearch(data)}} />
         <div id="main">
           <div className="container-fluid">
             <div id="filter">
@@ -175,10 +181,7 @@ const renderExtraData = (extraData) => {
               </div>
             </div>
             <div id="listing">
-              {/* {console.log(props.input)} */}
-              {/* {this.filterSearch(this.props.input)} */}
-              {/* <ListingDisplay input={this.props.input} search={this.state.searchedData} extra = {this.state.extraData}/> */}
-              {renderItemList(productList)}
+              {renderItemList(searchedData)}
               {renderExtraData(extraData)}
             </div>
           </div>

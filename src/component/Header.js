@@ -25,6 +25,8 @@ class Header extends Component {
   // }
 
   search = (e) => {
+    // this.props.history.push('/listing')
+    
     let text = e.target.value;
     // console.log(text);
     this.props.userInput(e.target.value);
@@ -115,44 +117,32 @@ class Header extends Component {
                 {this.handleLoginbtn()}
               </div>
               <div className="bottombar">
-                {/* <button className="categories">
-                  <div className="categories-button">
-                    Categories
-                    <span>
-                      <i className="fa-solid fa-caret-down"></i>
-                    </span>
-                  </div>
-                </button>
-                <button className="brands">
-                  <div className="brands-button">
-                    Brand
-                    <span>
-                      <i className="fa-solid fa-caret-down"></i>
-                    </span>
-                  </div>
-                </button> */}
                 <div className="search">
-                  <input
-                    onChange={this.search}
-                    type="text"
-                    placeholder="Search for brands"
-                  />
+                  <Link to={`/listing/1`}>
+                    <input
+                      onChange={this.search}
+                      type="text"
+                      placeholder="Search for brands"
+                      />
+                  </Link>
                   <div className="search-icon">
                     <i className="fa-solid fa-magnifying-glass"></i>
                   </div>
                 </div>
-                <ul className="cart">
+                {/* <ul className="cart"> */}
                   <li className="your-cart">
                     <Link to={`/cart`}>
                       <i className="fa-solid fa-cart-shopping"></i>
+                      <span> Cart</span>
                     </Link>
                   </li>
                   <li className="wishlist">
                     <Link to={`/wishlist`}>
                       <i className="fa-solid fa-heart"></i>
+                      <span> Wishlist</span>
                     </Link>
                   </li>
-                </ul>
+                {/* </ul> */}
               </div>
             </div>
           </div>

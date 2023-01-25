@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../Header';
 import './Wishlist.css'
 
 export default class Wishlist extends Component {
@@ -76,6 +77,7 @@ export default class Wishlist extends Component {
 
     render () {
         return(<React.Fragment>
+                <Header/>
                 <div className='wishlist-page'>
                     <div className='wishlist-heading'>My Wishlist</div>
                     {this.displayItems(this.state.wishlist)}
