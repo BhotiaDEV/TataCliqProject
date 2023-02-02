@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+import React, { useEffect , useState } from 'react';
 import axios from 'axios';
 import './ViewBooking.css';
 import Header from '../Header';
@@ -10,7 +10,7 @@ const ViewBooking = (props) => {
     const [order,setOrder] = useState([]);
 
     useEffect(()=>{
-        if(props.location){
+        // if(props.location){
 
             let query = props.location.search;
             let status = query.split('&')[0].split('=')[1];
@@ -37,7 +37,7 @@ const ViewBooking = (props) => {
                 // })
                 
             }
-        }
+        // }
             axios.get(orderurl)
             .then((res)=>{setOrder(res.data)})
         
