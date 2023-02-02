@@ -9,8 +9,8 @@ const updateurl = 'https://tatacliqapi.onrender.com/updateOrder';
 const ViewBooking = (props) => {
     const [order,setOrder] = useState([]);
 
-    useEffect(()=>{
-        // if(props.location){
+    useEffect((props)=>{
+        if(props.location){
 
             let query = props.location.search;
             let status = query.split('&')[0].split('=')[1];
@@ -37,7 +37,7 @@ const ViewBooking = (props) => {
                 // })
                 
             }
-        // }
+        }
             axios.get(orderurl)
             .then((res)=>{setOrder(res.data)})
         
