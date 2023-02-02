@@ -21,11 +21,12 @@ const ViewBooking = (props) => {
             if(query){
                 let data ={
                     "status":status,
+                    "bank_name":bank,
                     "date":date,
-                    "bank_name":bank
                 }
                 let id = orderId;
-                axios.patch(`${updateurl}/${id}`,data)
+                axios.patch(`${updateurl}/${id}`,JSON.stringify(data))
+                .then((res)=>console.log(res))
                 // fetch(`${updateurl}/${id}`,{
                 //     method:'PATCH',
                 //     headers:{
@@ -34,6 +35,7 @@ const ViewBooking = (props) => {
                 //     },
                 //     body: JSON.stringify(data)
                 // })
+                
             }
         }
             axios.get(orderurl)

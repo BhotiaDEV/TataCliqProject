@@ -28,7 +28,6 @@ class Header extends Component {
     // this.props.history.push('/listing')
     
     let text = e.target.value;
-    // console.log(text);
     this.props.userInput(e.target.value);
   };
   handleLogout(){
@@ -47,7 +46,7 @@ class Header extends Component {
                       <i className="fa-solid fa-user"></i>
                       <span style={{
                         'padding':'10px 5px',
-                        'font-weight':'300'
+                        'fontWeight':'300'
                         }}>
                         Hi {this.state.userData.name.split(' ')[0]}
                       </span>
@@ -63,7 +62,7 @@ class Header extends Component {
               <i className="fa-solid fa-user"></i>
               <span style={{
                 'padding':'10px 3px',
-                'font-weight':'300'
+                'fontWeight':'300'
                 }}>
                   Login
               </span>
