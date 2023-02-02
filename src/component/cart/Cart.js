@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Cart.css'
-import AddressPopup from './AddressPopup';
 import Header from '../Header';
 
 const placeOrder = 'https://tatacliqapi.onrender.com/placeOrder';
@@ -94,19 +92,19 @@ export default class Cart extends Component {
     renderCartItems(data){
         if(data)
             return data.map((item)=>{
-                return    <div className='cart-item'>
-                        <div className='cart-item-img'>
-                            <img src={item.image} alt=''/>
-                        </div>
-                        <div className='cart-item-details'>
-                            <div className='cart-item-name'>{item.product_name}</div>
-                            <div className='cart-item-price'>₹{item.price} <del>₹{item.original_price}</del></div>
-                            <div className='cart-item-color'><b>Color:</b> {item.color}</div>
-                            <div className='cart-item-size'><b>Size:</b> UK/IND-7.5</div>
-                            <div className='delivery-date'>Delivery by <b>20th Jan</b> | <span>FREE</span></div>
-                        </div>
-                        <div className='save-to-wishlist' onClick={(e)=>{this.addToWishlist(item)}}><i class="fa-solid fa-heart"></i> Save to Wislist</div> 
-                        <div className='remove-btn' onClick={(e)=>{this.deleteCartItem(this.state.cart,item._id)}}>Remove</div>
+                return  <div className='cart-item' key={item._id}>
+                            <div className='cart-item-img'>
+                                <img src={item.image} alt=''/>
+                            </div>
+                            <div className='cart-item-details'>
+                                <div className='cart-item-name'>{item.product_name}</div>
+                                <div className='cart-item-price'>₹{item.price} <del>₹{item.original_price}</del></div>
+                                <div className='cart-item-color'><b>Color:</b> {item.color}</div>
+                                <div className='cart-item-size'><b>Size:</b> UK/IND-7.5</div>
+                                <div className='delivery-date'>Delivery by <b>20th Jan</b> | <span>FREE</span></div>
+                            </div>
+                            <div className='save-to-wishlist' onClick={(e)=>{this.addToWishlist(item)}}><i className="fa-solid fa-heart"></i> Save to Wislist</div> 
+                            <div className='remove-btn' onClick={(e)=>{this.deleteCartItem(this.state.cart,item._id)}}>Remove</div>
                     </div>
                 }
             )
@@ -161,12 +159,12 @@ export default class Cart extends Component {
                     <div className='user-address'>
                             <div className='address-head'>Default Address</div>
                             <input id='address' className='address-body' value='house of dragons, Joshimath , Uttrakhand'/>
-                            <label for='address' className='address-label'>Change &rarr;</label>
+                            <label htmlFor='address' className='address-label'>Change &rarr;</label>
                             {/* <button className='address-change' onClick={(e)=>this.setState({popup : true})}>Change </button> */}
                             {/* <AddressPopup popup={this.state.popup} onClose={()=>{this.setState({popup:false})}} /> */}
                         </div>
                     <form 
-                     action='http://localhost:4100/paynow' method='POST'
+                     action='https://paytm-paymentgateway.onrender.com/paynow' method='POST'
                       className='purchase-details'>
                         <input type='hidden' name = 'id' value={this.state.id}/>
                         <input type='hidden' name = 'cost' value={this.state.cost}/>
