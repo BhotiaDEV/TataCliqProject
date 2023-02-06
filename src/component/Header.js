@@ -128,7 +128,7 @@ class Header extends Component {
                     <i className="fa-solid fa-magnifying-glass"></i>
                   </div>
                 </div>
-                {/* <ul className="cart"> */}
+                <ul className="cart-option">
                   <li className="your-cart">
                     <Link to={`/cart`}>
                       <i className="fa-solid fa-cart-shopping"></i>
@@ -139,7 +139,7 @@ class Header extends Component {
                       <i className="fa-solid fa-heart"></i>
                     </Link>
                   </li>
-                {/* </ul> */}
+                </ul>
               </div>
             </div>
           </div>

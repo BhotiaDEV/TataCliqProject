@@ -52,6 +52,12 @@ class Home extends Component {
      );
    })
   }
+  else{
+    return(
+    <>
+      <div className="loader"></div>
+    </>)
+  }
   }
   
 
@@ -75,7 +81,7 @@ class Home extends Component {
     return (
       <React.Fragment>
         <Header/>
-        <main>
+        <body>
          {console.log(this.state.branddata)} 
           <div className="banner">
             {/* <!-- Carousel --> */}
@@ -295,7 +301,7 @@ class Home extends Component {
           <div className="trending"></div>
           <div className="highlight"></div>
           <div className="popular"></div>
-        </main>
+        </body>
       </React.Fragment>
     );
   }
