@@ -90,7 +90,7 @@ export default class Cart extends Component {
     }
 
     renderCartItems(data){
-        if(data)
+        if(data != '')
             return data.map((item)=>{
                 return  <div className='cart-item' key={item._id}>
                             <div className='cart-item-img'>
@@ -108,6 +108,16 @@ export default class Cart extends Component {
                     </div>
                 }
             )
+        else{
+                return(
+                    <>
+                        <div className='no-item-msg'>
+                            <span>Currently, there are no items in your Cart</span>
+                            <button className='' onClick={()=>this.props.history.push('/')}>Continue shopping</button>
+                        </div>
+                    </>
+                )
+            }
             
             
     }

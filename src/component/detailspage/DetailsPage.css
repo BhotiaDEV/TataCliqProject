@@ -220,8 +220,12 @@ main {
   padding: 10px 50px;
   background-color: orangered;
   border: 2px solid orangered;
-  color: #ececec;
+  color: #fff;
   border-radius: 25px;
+}
+.buy-now button:active{
+  color:orangered;
+  background-color:#fff;
 }
 .add-to-wishlist > button {
   margin: 10px 0 10px 10px;
@@ -230,6 +234,10 @@ main {
   background-color: #fff;
   border: 2px solid orangered;
   color: orangered;
+}
+.add-to-wishlist button:active{
+  color:#fff;
+  background-color:orangered;
 }
 .seller-details span {
   font-size: 0.9em;

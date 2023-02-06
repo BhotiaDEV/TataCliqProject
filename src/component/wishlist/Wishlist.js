@@ -54,7 +54,7 @@ export default class Wishlist extends Component {
     }
 
     displayItems  (data)  {
-        if(data)
+        if(data != '')
         {
             return data.map((item) => {
                    return <div className='wishlist-item'>
@@ -73,6 +73,16 @@ export default class Wishlist extends Component {
                 })
             
         }
+        else{
+            return(
+                <>
+                    <div className='no-item-msg'>
+                        <span>Currently, there are no items in your Wishlist</span>
+                        <button className='' onClick={()=>this.props.history.push('/')}>Continue shopping</button>
+                    </div>
+                </>
+            )
+        }
     }
 
     render () {
@@ -81,8 +91,6 @@ export default class Wishlist extends Component {
                 <div className='wishlist-page'>
                     <div className='wishlist-heading'>My Wishlist</div>
                     {this.displayItems(this.state.wishlist)}
-                    {/* {console.log(this.state.wishlist)} */}
-                    {/* {console.log(this.state.cart)} */}
                     <div className='user-data'>
                         <div className='user-details'>
                             <div className='user-image'></div>
