@@ -289,7 +289,6 @@ body {
   }
   .wishlist,
   .your-cart {
-    border:1px solid red;
     z-index:1000;
     /* width:200px; */
     /* margin-top: 5%; */
