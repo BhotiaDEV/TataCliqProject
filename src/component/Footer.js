@@ -21,15 +21,11 @@ class Footer extends Component {
               <div className="foot-head">Customer Service</div>
               <div className="foot-topic">Shopping</div>
               <div className="foot-topic">Offers & Promotions</div>
-              <div className="foot-topic">Payments</div>
               <div className="foot-topic">Cancellation</div>
               <div className="foot-topic">Returns & Refunds</div>
-              <div className="foot-topic">CliQ And PiQ</div>
-              <div className="foot-topic">Return To Store</div>
               <div className="foot-topic">Electronics Return Policy</div>
               <div className="foot-topic">Contact Us</div>
               <div className="foot-topic">Reviews Guidelines</div>
-              <div className="foot-topic">Furniture Return Policy</div>
             </div>
             <div className="foot-content">
               <div className="foot-head">My Tata CLiQ</div>
