@@ -132,13 +132,11 @@ class Header extends Component {
                   <li className="your-cart">
                     <Link to={`/cart`}>
                       <i className="fa-solid fa-cart-shopping"></i>
-                      <span> Cart</span>
                     </Link>
                   </li>
                   <li className="wishlist">
                     <Link to={`/wishlist`}>
                       <i className="fa-solid fa-heart"></i>
-                      <span> Wishlist</span>
                     </Link>
                   </li>
                 {/* </ul> */}
