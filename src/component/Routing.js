@@ -14,16 +14,8 @@ import Wishlist from "./wishlist/Wishlist";
 const Routing = () => {
   
   const [input,setInput] = useState('');
-  // const filterData (data) => {
-  //   let output = data.filter((item)=>{
-  //     return(item.product_name.toLowerCase().indexOf(input.toLowerCase())>-1)
-  //   })
-  //   setSearch(output)
-  // }
   return (
     <BrowserRouter>
-      {/* <Header userInput={(data)=>{setInput(data)}}/> */}
-      {/* {console.log(input)} */}
       <Route exact path="/" component={Home} />
       <Route path="/listing/:category_id" render={(props)=> <ListingPage {...props} /> }/>
       {/* <Route path="/listing/:category_id"><ListingPage input = {input}/></Route> */}

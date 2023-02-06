@@ -104,14 +104,14 @@ class Header extends Component {
             </div>
             <div className="nav-options">
               <div className="topbar">
-                <a
+                {/* <a
                   href="/"
                   // onClick={this.darkmode()}
                   id="togglebtn"
                   className="topbar-item"
                 >
                   <i id="toggle-icon" className="fa-solid fa-moon"></i>
-                </a>
+                </a> */}
                 
                 {this.handleLoginbtn()}
               </div>

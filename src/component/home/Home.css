@@ -6,8 +6,8 @@
 :root {
   --primary-bg-color: #ececec;
   --secondary-color: #212121;
-  --hover-shadow: #fec4ae;
-  --primary-footer-color: #fff;
+  --hover-shadow: -6px -6px 12px #fff, 6px 6px 12px #cacaca;
+  --primary-footer-color: #ececec;
 }
 .dark-theme {
   --primary-bg-color: #212121;
@@ -24,6 +24,7 @@ a {
 
 body {
   letter-spacing: 0.5px;
+  /* background-color: #fff; */
   background-color: var(--primary-bg-color);
 }
 /* geolocation */
@@ -110,12 +111,12 @@ body {
   margin: 0 0.5% 10% 1.5%;
   position: relative;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   border-radius: 10px;
 }
 .card-item-col-4:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px var(--hover-shadow);
+  box-shadow: var(--hover-shadow);
 }
 
 .card-item-col-4 img {
@@ -129,12 +130,17 @@ body {
   right: 5%;
   bottom: 5%;
   height: 30%;
-  background-color: var(--primary-bg-color);
+  background-color:#fff;
+  /* background-color: var(--primary-bg-color); */
   color: var(--secondary-color);
   border-radius: 10%;
+  transition:all 0.4s ease;
 }
 .card-details p {
   text-transform: capitalize;
+}
+.card-details:hover{
+  box-shadow:  inset -6px -6px 12px #fff, inset 6px 6px 12px #bcbbbb;
 }
 
 /* card item css for 2 column */
@@ -147,12 +153,12 @@ body {
   margin: 0% 2.5% 5% 2.5%;
   position: relative;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   border-radius: 10px;
 }
 .card-item-col-2:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px var(--hover-shadow);
+  box-shadow: var(--hover-shadow);
 }
 
 .card-item-col-2 img {
@@ -169,7 +175,7 @@ body {
   margin: 0 0 5% 0;
   /* position: relative; */
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   display: inline-block;
   outline: none;
 }
