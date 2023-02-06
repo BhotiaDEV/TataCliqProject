@@ -215,8 +215,6 @@ class DetailsPage extends Component {
       });
   }
   render() {
-    // detailsurl = "https://tatacliqapi.onrender.com/details/{this.props}";
-    // console.log(this.props);
     return (
       <>
         <Header/>

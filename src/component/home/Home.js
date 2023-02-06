@@ -17,29 +17,45 @@ class Home extends Component {
   }
 
   renderCol4 = (data) =>{
-    if(data)
+    if(data !='')
     return data.map((item) => {
       return (
-        <Link to ={`/listing/${item.category_id}?brandId=${item.brand_id}`}>
-          <div className="card-item-col-4" key={item.brand_id}>
-            <img src={item.brand_img} alt="" />
-            <div className="card-details">
-              <div className="jumbotron">
-                <h2>{item.brand}</h2>
-                <p>{item.category}</p>
+        <div className="card-item-col-4" key={item.brand_id}>
+          <Link to ={`/listing/${item.category_id}?brandId=${item.brand_id}`}>
+              <img src={item.brand_img} alt="" />
+              <div className="card-details">
+                <div className="jumbotron">
+                  <h2>{item.brand}</h2>
+                  <p>{item.category}</p>
+                </div>
               </div>
-            </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
      );
    })
+  else{
+    return(
+      <ul className="loader">
+        <li>L</li>
+        <li>O</li>
+        <li>A</li>
+        <li>D</li>
+        <li>I</li>
+        <li>N</li>
+        <li>G</li>
+        <li>.</li>
+        <li>.</li>
+        <li>.</li>
+      </ul>
+    )
+  }   
   }
   renderCol2 = (data) =>{
-    if(data){
+    if(data !=''){
     return data.map((item) => {
       return (
-        <Link to ={`/listing/${item.category_id}?brandId=${item.brand_id}`}>
-            <div className="card-item-col-2" key={item.brand_id}>
+        <div className="card-item-col-2" key={item.brand_id}>
+              <Link to ={`/listing/${item.category_id}?brandId=${item.brand_id}`}>
                     <img src={item.brand_img} alt="" />
                     <div className="card-details">
                       <div className="jumbotron">
@@ -47,15 +63,26 @@ class Home extends Component {
                         <p>up to {item.brand_offers}% off</p>
                       </div>
                     </div>
-            </div>
-        </Link>
+              </Link>
+        </div>
      );
    })
   }
   else{
     return(
     <>
-      <div className="loader"></div>
+      <ul className="loader">
+        <li>L</li>
+        <li>O</li>
+        <li>A</li>
+        <li>D</li>
+        <li>I</li>
+        <li>N</li>
+        <li>G</li>
+        <li>.</li>
+        <li>.</li>
+        <li>.</li>
+      </ul>
     </>)
   }
   }

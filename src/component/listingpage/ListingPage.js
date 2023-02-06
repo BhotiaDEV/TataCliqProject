@@ -43,7 +43,7 @@ const ListingPage = (props)=> {
   },[])
 
   const renderItemList = (data) => {
-    if (data) {
+    if (data != '') {
       return data.map((item) => {
         return (
           <Link to={`/details/${item.id}`}>
@@ -87,8 +87,21 @@ const ListingPage = (props)=> {
       });
     }
     else{
-      return(<><h1 style={{textAlign : "center"}} >Loading...</h1></>)
-    }
+      return(
+        <ul className="loader">
+          <li>L</li>
+          <li>O</li>
+          <li>A</li>
+          <li>D</li>
+          <li>I</li>
+          <li>N</li>
+          <li>G</li>
+          <li>.</li>
+          <li>.</li>
+          <li>.</li>
+        </ul>
+      )
+    }   
     
   }
   const renderExtraData = (extraData) => {

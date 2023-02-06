@@ -184,6 +184,22 @@ const DetailsDisplay = (props) => {
           );
       });
     }
+    else{
+      return(
+        <ul className="loader">
+          <li>L</li>
+          <li>O</li>
+          <li>A</li>
+          <li>D</li>
+          <li>I</li>
+          <li>N</li>
+          <li>G</li>
+          <li>.</li>
+          <li>.</li>
+          <li>.</li>
+        </ul>
+      )
+    } 
   };
   return <>{details(props)}</>;
 };
