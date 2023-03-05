@@ -219,7 +219,7 @@ class DetailsPage extends Component {
       <>
         <Header/>
         <main>
-          <DetailsDisplay productdata={this.state.productdetails} />
+          <DetailsDisplay productdata={this.state.productdetails} history={this.props.history} />
         </main>
       </>
     );

@@ -25,8 +25,8 @@ const ViewBooking = (props) => {
                     "date":date,
                 }
                 let id = orderId;
-                axios.patch(`${updateurl}/${id}`,JSON.stringify(data))
-                .then((res)=>console.log(res))
+                // axios.patch(`${updateurl}/${id}`,JSON.stringify(data))
+                // .then((res)=>console.log(res))
                 // fetch(`${updateurl}/${id}`,{
                 //     method:'PATCH',
                 //     headers:{
@@ -35,14 +35,18 @@ const ViewBooking = (props) => {
                 //     },
                 //     body: JSON.stringify(data)
                 // })
-                
+                fetch(`${updateurl}/${id}`,{
+                    method:'PUT',
+                    headers:{
+                        'Accept':'application/json',
+                        'Content-Type':'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
             }
         }
             axios.get(orderurl)
             .then((res)=>{setOrder(res.data)})
-        
-
-
     },[])
 
 

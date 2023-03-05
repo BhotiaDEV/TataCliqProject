@@ -95,8 +95,8 @@ const DetailsDisplay = (props) => {
                   })}
                 </div>
                 <div className="buy-now">
-                  <button>BUY NOW</button>
-                </div>
+                <button onClick={()=>{props.history.push('/wishlist')}}>Wishlist</button>
+                 </div>
                 <div className="add-to-wishlist">
                   <button onClick={()=>{handleOnClick(item)}}>ADD TO WISHLIST</button>
                 </div>
@@ -164,7 +164,7 @@ const DetailsDisplay = (props) => {
                   <div className="colour-image"></div>
                 </div>
                 <div className="buy-now">
-                  <button>BUY NOW</button>
+                  <button onClick={()=>{props.history.push('/wishlist')}}>Wishlist</button>
                 </div>
                 <div className="add-to-wishlist">
                   <button onClick={()=>{handleOnClick(item)}} >ADD TO WISHLIST</button>

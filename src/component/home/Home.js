@@ -87,8 +87,17 @@ class Home extends Component {
   }
   }
   
-
+// fetch(`${url}/${id}`,{
+  // method:'PUT',
+  // headers:{
+      // 'Accept':'application/json',
+      // 'Content-Type':'application/json'
+//   },
+//   body: JSON.stringify(data)
+// })
+// axios.get(`${ourl}?email=${sessionData[1]}`).then((res) => {this.setState({order:res.data})})
   componentDidMount() {
+    
     fetch(brandurl, { method: "GET" })
     .then((res) => res.json())
     .then((data) => {
@@ -101,6 +110,9 @@ class Home extends Component {
   getRandom = (data)=>{
     this.setState({random : data.sort(() => 0.5 - Math.random()).slice(0,4)})   
       
+  }
+  componentDidUpdate(branddata){
+
   }
 
   render() {
